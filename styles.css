@@ -1,0 +1,176 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url('images/bg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed while scrolling */
+  }
+  
+  /* Other styles remain the same */
+  .login-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .login-form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 1rem;
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+  
+  .login-form input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .login-form input::placeholder {
+    color: #999;
+  }
+  
+  .login-form button {
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-form button:hover {
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    transform: scale(1.05);
+  }
+  
+  .login-form p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .login-form a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Moving Object Animation */
+  .moving-object {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ff5722, #ff9800);
+    border-radius: 50%;
+    animation: moveAround 10s infinite linear;
+    z-index: 0;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes moveAround {
+    0% {
+      transform: translate(-50%, -50%) translateX(-200px) translateY(-200px);
+    }
+    25% {
+      transform: translate(-50%, -50%) translateX(200px) translateY(-200px);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateX(200px) translateY(200px);
+    }
+    75% {
+      transform: translate(-50%, -50%) translateX(-200px) translateY(200px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateX(-200px) translateY(-200px);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+    to {
+      text-shadow: 2px 2px 15px rgba(255, 235, 59, 0.9);
+    }
+  }
+  
